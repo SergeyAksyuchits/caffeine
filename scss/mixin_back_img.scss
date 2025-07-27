@@ -1,0 +1,8 @@
+@mixin img ($a, $b, $c, ) {
+    max-width: $a;
+    height: $b;
+    background-image: $c;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

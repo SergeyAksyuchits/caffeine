@@ -1,0 +1,10 @@
+@mixin button ($a, $b, $c, $d, $e, $f) {
+    width: $a;
+    height: $b;
+    background-color: $c;
+    border-radius: $d;
+    font: $e;
+    color: $f;
+    display: block;
+    border: none;
+}

@@ -1,0 +1,423 @@
+$main-background-color: white;
+$font-p: 400 14px "Playfair Display";
+$text-color-h: #603809;
+$bottom-height: 48px;
+
+
+@import "../scss/mixinflex.scss";
+
+@import "../scss/mixin_back_img.scss";
+
+@import "../scss/mixin.scss";
+
+@import "../scss/mixin_text.scss";
+
+@import '../scss/mixin_back_img.scss';
+
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: white;
+}
+
+.backimg {
+    @include img(100%, 768px, url(../img/Group\ 61.png));
+}
+
+header {
+    width: 100%;
+
+    .conteiner {
+        padding: 20px 93px;
+        max-width: 100%;
+        margin: auto;
+        @include flexbox(space-between, center, row, 0);
+
+
+        h3 {
+            @include text("Clicker Script", 400, 35px, 100%, #FFFFFF);
+        }
+
+        nav {
+            @include text("Playfair Display", 500, 14px, 100%, #FFFFFF);
+            display: flex;
+            gap: 42px;
+        }
+
+        .right {
+            @include flexbox (start, center, row, 35px);
+            @include text("Playfair Display", 500, 14px, 100%, #FFFFFF);
+        }
+
+        .right button {
+            @include button(100px, 48px, #F9C06A, 24px, 400 14px "Playfair Display", #1E1E1E);
+            box-shadow: 0px 6px 12px 0px #F9C06A38;
+        }
+    }
+
+}
+
+.section2 {
+    max-width: 527px;
+    margin: 116px 0 0 93px;
+    padding-bottom: 95px;
+    @include flexbox (start, stretch, column, 20px);
+
+    .text1 {
+        @include text("Playfair Display", 500, 22px, 100%, #FFFFFF);
+    }
+
+    h1 {
+        @include text("Clicker Script", 400, 220px, 100%, #FFFFFF);
+    }
+
+    .text2 {
+        @include text("Playfair Display", 400, 20px, 34px, #FFFFFF);
+    }
+
+    button {
+        @include button(100px, 48px, #F9C06A, 24px, 700 16px "Playfair Display", #1E1E1E);
+        box-shadow: 0px 6px 12px 0px #F9C06A38;
+        line-height: 100%;
+    }
+
+}
+
+.coffee {
+    @include flexbox(space-between, center, row, 0);
+    width: 100%;
+    padding: 150px 93px 150px 93px;
+
+    .coffee_text {
+        @include flexbox (start, stretch, column, 29px);
+        max-width: 585px;
+
+        h2 {
+            @include text("Playfair Display", 700, 54px, 100%, $text-color-h);
+        }
+
+        p {
+            @include text("Playfair Display", 400, 20px, 34px, #707070);
+        }
+
+        button {
+            @include button(134px, 48px, #F9C06A, 24px, 700 16px "Playfair Display", #1E1E1E);
+        }
+    }
+
+    .coffee_img img {
+        max-width: 680px;
+    }
+}
+
+.price {
+    max-width: 1180px;
+    margin: auto;
+
+
+    .slide_text {
+
+        @include flexbox (start, center, column, 20px);
+
+        h2 {
+            @include text ("Playfair Display", 700, 54px, 100%, $text-color-h)
+        }
+
+        p {
+            @include text ("Playfair Display", 400, 20px, 34px, #707070)
+        }
+    }
+
+    .slide {
+
+        @include flexbox (space-between, center, row, 0);
+
+        .slide_box {
+            max-width: 280px;
+            border: 1px solid #F9C06A6B;
+            position: relative;
+            margin-top: 32px;
+
+        }
+
+        .slide_text {
+            background-color: #FFF9F1;
+
+            h3 {
+                @include text ("Playfair Display", 700, 22px, 100%, $text-color-h);
+            }
+
+            p {
+                @include text ("Playfair Display", 400, 16px, 100%, #1E1E1E);
+            }
+
+            .text2 {
+                @include text ("Playfair Display", 700, 18px, 100%, $text-color-h);
+            }
+
+            button {
+                @include button (134px, $bottom-height, #F9C06A, 24px, 700 16px "Playfair Display", #1E1E1E);
+                position: absolute;
+                bottom: -($bottom-height/2);
+            }
+        }
+    }
+
+}
+
+.different {
+    max-width: 1180px;
+    margin: auto;
+    padding-top: 106px;
+
+    .text {
+        @include flexbox (start, center, column, 16px);
+
+        h2 {
+            @include text ("Playfair Display", 700, 54px, 100%, $text-color-h);
+        }
+
+        p {
+            @include text ("Playfair Display", 400, 20px, 34px, $text-color-h );
+        }
+    }
+
+    .slide {
+
+        @include flexbox (space-between, center, row, 0);
+        margin-top: 32px;
+
+        .block {
+
+            @include flexbox (center, center, column, 16px);
+            max-width: 280px;
+            height: 284px;
+            border: 1px solid #F9C06A6B;
+            background-color: #FFF9F1;
+            padding: 39px 36px;
+            text-align: center;
+
+            &.block_active {
+                background-color: #FFEED8;
+
+            }
+
+            img {
+                width: 88px;
+                height: 88px
+            }
+
+            h3 {
+                @include text ("Playfair Display", 700, 28px, 100%, $text-color-h);
+
+            }
+
+            p {
+                @include text ("Playfair Display", 400, 20px, 100%, #707070);
+            }
+        }
+    }
+
+    .end {
+        padding-top: 32px;
+        @include flexbox (center, center, column, 24px);
+
+        p {
+            @include text ("Playfair Display", 400, 20px, 100%, #707070);
+        }
+
+        h3 {
+            @include text ("Playfair Display", 700, 28px, 100%, $text-color-h);
+        }
+
+        button {
+            @include button (134px, $bottom-height, #F9C06A, 24px, 700 16px "Playfair Display", #1E1E1E);
+
+        }
+    }
+
+}
+
+.chance {
+    margin-top: 82px;
+    @include img(100%, 574px, url(../img/Group\ 38.svg));
+
+
+    .chance_all {
+        @include flexbox (start, normal, row, 0);
+
+        .text {
+            @include flexbox (start, stretch, column, 24px);
+            max-width: 575px;
+            margin: 135px 93px;
+
+
+
+            h2 {
+                @include text ("Playfair Display", 700, 54px, 100%, #FFFFFF);
+            }
+
+            p {
+                @include text ("Playfair Display", 400, 20px, 34px, #FFFFFF);
+            }
+
+            button {
+                @include button (134px, $bottom-height, #F9C06A, 24px, 700 16px "Playfair Display", #1E1E1E);
+
+            }
+        }
+
+        .img_cof img {
+            max-width: 300px;
+            margin: 54px 173px;
+        }
+
+    }
+}
+
+.feedback {
+    padding-top: 82px;
+
+
+    .text {
+        @include flexbox (start, center, column, 16px);
+
+        h2 {
+            @include text ("Playfair Display", 700, 54px, 100%, $text-color-h);
+        }
+
+        p {
+            @include text ("Playfair Display", 400, 20px, 34px, #707070);
+            padding-bottom: 45px;
+        }
+    }
+
+    .conteiner {
+        //    position: relative;
+        max-width: 980px;
+        margin: auto;
+        background-color: #FFF9F1;
+
+        .text2 p {
+            @include text ("Playfair Display", 700, 220px, 112px, $text-color-h);
+            // position: absolute;
+            padding: 54px 29px 0;
+        }
+
+        .button {
+            position: relative;
+            @include flexbox (space-between, center, row, 0);
+
+            .left {
+                @include button (82px, 82px, #F9C06A, 24px, 700 16px "Playfair Display", #1E1E1E);
+                position: absolute;
+                left: -42px;
+            }
+
+            p {
+                @include text ("Playfair Display", 600, 18px, 36px, #707070);
+                max-width: 780px;
+                margin-left: 100px;
+                text-align: center
+            }
+
+            .right {
+                @include button (82px, 82px, #F9C06A, 24px, 700 16px "Playfair Display", #1E1E1E);
+                position: absolute;
+                left: 941px;
+            }
+        }
+    }
+
+
+    .last {
+        @include flexbox (center, center, column, 0);
+        margin-top: 28px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 100px;
+
+        h3 {
+            @include text ("Playfair Display", 700, 32px, 100%, $text-color-h);
+        }
+
+        p {
+            @include text ("Playfair Display", 400, 20px, 34px, $text-color-h);
+            margin-top: 4px;
+        }
+
+        .last_img {
+            border-radius: 16px;
+            position: absolute;
+            bottom: -76px;
+        }
+    }
+
+    .fon_img {
+        @include img(100%, 374px, url(../img/Group\ 38.svg));
+    }
+}
+
+
+footer {
+
+    max-width: 100%;
+
+    .backimg2 {
+        padding: 162px 93px 0 93px;
+        @include img (100%, 698px, url(../img/Group\ 62.svg));
+        @include flexbox (space-between, start, row, 0);
+        
+    }
+
+    .block1 {
+
+        h3 {
+            @include text ("Clicker Script", 400, 54px, 100%, #FFFFFF);
+        }
+
+        p {
+            @include text ("Playfair Display", 400, 14px, 22px, #FFFFFF);
+            margin-top: 30px;
+            max-width: 380px;
+        }
+
+        .social {
+            @include flexbox (start, center, row, 20px);
+            margin-top: 20px;
+        }
+    }
+
+    .block2 {
+        h3 {
+            @include text ("Playfair Display", 700, 26px, 100%, #FFFFFF);
+        }
+
+        .text {
+            margin-top: 55px;
+            @include flexbox (start, start, column, 0);
+
+            p {
+                @include text ("Playfair Display", 400, 18px, 42px, #FFFFFF);
+            }
+        }
+
+        .text2 {
+            margin-top: 55px;
+            @include flexbox (start, start, column, 22px);
+            @include text ("Playfair Display", 400, 18px, 100%, #FFFFFF);
+            max-width: 332px;
+        }
+    }
+
+}
